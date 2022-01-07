@@ -7,6 +7,16 @@ const reader = readline.createInterface({
 
 let storedPassword = 'DevMountain23' // added for extra validator. Program will now check for password length and match
 
+const failureArt = `
+_____  ____ ____ _     __ __ ____    ___ __ 
+|     |/    |    | |   |  |  |    \  /  _|  |
+|   __|  o  ||  || |   |  |  |  D  )/  [_|  |
+|  |_ |     ||  || |___|  |  |    /|    _|__|
+|   _]|  _  ||  ||     |  :  |    \|   [_ __ 
+|  |  |  |  ||  ||     |     |  .  |     |  |
+|__|  |__|__|____|_____|\__,_|__|\_|_____|__|
+                                            
+`
 
 const successArt = `
 ______                                  _ 
@@ -25,7 +35,7 @@ reader.question("Hello! Please enter password. ", function(input){
  password = data[0];
 
  if(password.length < 10 || password != storedPassword){
- console.log('Failure!')
+ console.log(failureArt)
  } else if(password.length > 10 || password === storedPassword){
    console.log(successArt)
 
