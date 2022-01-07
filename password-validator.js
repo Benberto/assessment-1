@@ -5,7 +5,7 @@ const reader = readline.createInterface({
   output: process.stdout,
 });
 
-let storedPassword = 'DevMountain'
+let storedPassword = 'DevMountain23' // added for extra validator. Program will now check for password length and match
 
 reader.question("Hello! Please enter your password. ", function(input){
  data = input.split(' ');
@@ -14,7 +14,7 @@ reader.question("Hello! Please enter your password. ", function(input){
 
  if(password.length < 10 || password != storedPassword){
  console.log('Failure!')
- } else if(password === storedPassword){
+ } else if(password.length > 10 || password === storedPassword){
    console.log('Success!')
 
  }
